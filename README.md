@@ -5,9 +5,11 @@
 - [x] css 설정
 - [x] 웹 폰트
 - [x] API 설정
-- [ ] Header,footer, Loading, 404
-- [ ] 각 페이지 ui + 반응형 작업
+- [x] Header,footer, Loading, 404
 - [ ] Helmet
+- [x] Main page ui
+- [ ] Detail page ui
+- [ ] Search page ui
 - [ ] Page scroll Event
 - [ ] Deploy
 

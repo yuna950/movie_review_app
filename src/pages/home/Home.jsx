@@ -5,9 +5,9 @@ import {
   getTopRated,
   getUpComing,
 } from "../api/movieApi";
-import Section_1 from "./components/Section_1";
-import { Link } from "react-router-dom";
 import Loading from "../../components/Loading";
+import Section_1 from "./components/Section_1";
+import Section_2 from "./components/Section_2";
 
 export default function Home() {
   // const [num, setNum] = useState(0);
@@ -92,9 +92,22 @@ export default function Home() {
     );
   }
 
+  const nowPlayingData = movieData?.nowPlaying?.response;
+  const popularData = movieData?.popular?.response;
+  const topRatedData = movieData?.topRated?.response;
+  const upComingData = movieData?.upComing?.response;
+  console.log(popularData);
+
   return (
     <div className="min-h-screen">
-      <Section_1 data={movieData?.nowPlaying?.response?.results[0]} />
+      <Section_1 data={nowPlayingData.results[0]} />
+
+      <div className="px-[20px] lg:px-[80px] xl:px-[200px] py-[100px] xl:py-[150px] font-[600]">
+        <Section_2 title={"현재 상영 중"} data={nowPlayingData} />
+        <Section_2 title={"인기 영화"} data={popularData} />
+        <Section_2 title={"평점 높은 순"} data={topRatedData} />
+        <Section_2 title={"개봉 예정"} data={upComingData} />
+      </div>
     </div>
   );
 }
