@@ -8,6 +8,8 @@ import {
 import Loading from "../../components/Loading";
 import Section_1 from "./components/Section_1";
 import Section_2 from "./components/Section_2";
+import { Helmet } from "react-helmet-async";
+import PageTitle from "../../components/PageTitle";
 
 export default function Home() {
   // const [num, setNum] = useState(0);
@@ -100,6 +102,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <PageTitle title={"HOME"} />
+
       <Section_1 data={nowPlayingData.results[0]} />
 
       <div className="px-[20px] lg:px-[80px] xl:px-[200px] py-[100px] xl:py-[150px] font-[600]">

@@ -6,7 +6,7 @@
 - [x] 웹 폰트
 - [x] API 설정
 - [x] Header,footer, Loading, 404
-- [ ] Helmet
+- [x] Helmet
 - [x] Main page ui
 - [ ] Detail page ui
 - [ ] Search page ui

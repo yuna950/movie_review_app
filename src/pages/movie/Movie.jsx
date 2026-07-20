@@ -1,3 +1,9 @@
+import PageTitle from "../../components/PageTitle";
+
 export default function movie() {
-  return;
+  return (
+    <div>
+      <PageTitle title={`Detail`} />
+    </div>
+  );
 }
