@@ -1,6 +1,7 @@
 import Loading from "../../components/Loading";
 import PageTitle from "../../components/PageTitle";
 import { ORIGINAL_URL, W500_URL } from "../../constant/imgBaseUrl";
+import { useScrollTop } from "../../lib/useScrollTop";
 import { getDetail } from "../api/movieApi";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -11,8 +12,9 @@ export default function movie() {
   // => url의 매개변수 값을 객체로 반환
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
+  useScrollTop();
 
-  console.log(id);
+  // console.log(id);
 
   useEffect(() => {
     (async () => {
@@ -53,9 +55,9 @@ export default function movie() {
       </div>
 
       <div className="max-w-[1200px] mx-auto px-4 md:px-10 py-10 md:py-16 md:flex items-start justify-center gap-5">
-        <div className="w-full lg:w-[50%] xl:w-[50%]">
+        <div className="w-[260px]">
           <img
-            className="w-full"
+            className="w-full h-full"
             src={W500_URL + detailData.poster_path}
             alt={detailData.title}
           />
