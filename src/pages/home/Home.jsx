@@ -94,11 +94,13 @@ export default function Home() {
     );
   }
 
-  const nowPlayingData = movieData?.nowPlaying?.response;
-  const popularData = movieData?.popular?.response;
-  const topRatedData = movieData?.topRated?.response;
-  const upComingData = movieData?.upComing?.response;
-  console.log(popularData);
+  const nowPlayingData = movieData?.nowPlaying;
+  const popularData = movieData?.popular;
+  const topRatedData = movieData?.topRated;
+  const upComingData = movieData?.upComing;
+  // console.log(popularData);
+
+  // console.log(movieData?.nowPlaying.results[0]);
 
   return (
     <div className="min-h-screen">

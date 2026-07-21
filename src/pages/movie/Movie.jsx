@@ -19,8 +19,8 @@ export default function movie() {
   useEffect(() => {
     (async () => {
       try {
-        const detailData = await getDetail(id);
-        setData(detailData);
+        const data = await getDetail(id);
+        setData(data);
       } catch (error) {
         console.log(error);
       } finally {
@@ -37,20 +37,20 @@ export default function movie() {
     );
   }
 
-  const detailData = data?.response;
-  // console.log(detailData);
+  // const data = data?.response;
+  // console.log(data);
   return (
     <div className="min-h-screen">
-      <PageTitle title={detailData.title} />
+      <PageTitle title={data.title} />
 
       <div
         style={{
-          background: `#808080 url(${ORIGINAL_URL}${detailData.backdrop_path}) no-repeat center / cover`,
+          background: `#808080 url(${ORIGINAL_URL}${data.backdrop_path}) no-repeat center / cover`,
         }}
         className="h-[80vh] px-[20px] lg:px-[80px] xl:px-[200px] relative "
       >
         <div className=" absolute left-8 bottom-8">
-          <p className="font-bold text-4xl mb-5">{detailData.title}</p>
+          <p className="font-bold text-4xl mb-5">{data.title}</p>
         </div>
       </div>
 
@@ -58,27 +58,27 @@ export default function movie() {
         <div className="w-[260px]">
           <img
             className="w-full h-full"
-            src={W500_URL + detailData.poster_path}
-            alt={detailData.title}
+            src={W500_URL + data.poster_path}
+            alt={data.title}
           />
         </div>
 
         <div className="mt-5 opacity-80">
           <div className="flex items-center space-x-4 mb-5 text-sm">
-            <span>⭐{detailData.vote_average}점</span>
+            <span>⭐{data.vote_average}점</span>
             <span>•</span>
-            <span>{detailData.runtime}분</span>
+            <span>{data.runtime}분</span>
             <span>•</span>
-            <span>{detailData.release_date}</span>
+            <span>{data.release_date}</span>
           </div>
 
           <ul className="text-sm space-y-2 ">
-            {detailData.genres.map((genre) => (
+            {data.genres.map((genre) => (
               <li key={genre.id}>• {genre.name}</li>
             ))}
           </ul>
 
-          <p className="mt-9 text-sm">{detailData.overview}</p>
+          <p className="mt-9 text-sm">{data.overview}</p>
         </div>
       </div>
     </div>
