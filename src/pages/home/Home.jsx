@@ -84,8 +84,6 @@ export default function Home() {
     })();
   }, []);
 
-  // console.log(movieData?.nowPlaying?.response?.results[1]?.title);
-
   if (loading) {
     return (
       <div className="min-h-screen flex justify-center items-center">
@@ -98,9 +96,6 @@ export default function Home() {
   const popularData = movieData?.popular;
   const topRatedData = movieData?.topRated;
   const upComingData = movieData?.upComing;
-  // console.log(popularData);
-
-  // console.log(movieData?.nowPlaying.results[0]);
 
   return (
     <div className="min-h-screen">

@@ -14,8 +14,6 @@ export default function movie() {
   const [loading, setLoading] = useState(true);
   useScrollTop();
 
-  // console.log(id);
-
   useEffect(() => {
     (async () => {
       try {
@@ -38,7 +36,7 @@ export default function movie() {
   }
 
   // const data = data?.response;
-  // console.log(data);
+
   return (
     <div className="min-h-screen">
       <PageTitle title={data.title} />

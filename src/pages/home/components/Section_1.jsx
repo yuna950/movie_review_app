@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ORIGINAL_URL } from "../../../constant/imgBaseUrl";
 
 export default function Section_1({ data }) {
-  console.log(data);
   const {} = data;
   return (
     <section

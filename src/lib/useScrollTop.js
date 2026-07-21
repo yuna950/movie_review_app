@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 export const useScrollTop = () => {
   const { pathname } = useLocation();
   // => url의 정보를 가져옴
-  // console.log(pathname);
 
   useEffect(() => {
     window.scrollTo({

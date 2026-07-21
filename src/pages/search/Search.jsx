@@ -21,8 +21,6 @@ export default function search() {
     setData(searchData.results);
   };
 
-  console.log(data);
-
   return (
     <div>
       <div className="min-h-screen mt-30 px-[20px] lg:px[80px] xl:px-[200px] ">
