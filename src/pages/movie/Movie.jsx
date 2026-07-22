@@ -53,9 +53,9 @@ export default function movie() {
       </div>
 
       <div className="max-w-[1200px] mx-auto px-4 md:px-10 py-10 md:py-16 md:flex items-start justify-center gap-5">
-        <div className="w-[260px]">
+        <div className="w-[400px]">
           <img
-            className="w-full h-full"
+            className="w-full"
             src={W500_URL + data.poster_path}
             alt={data.title}
           />

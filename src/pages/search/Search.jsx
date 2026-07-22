@@ -40,10 +40,10 @@ export default function search() {
         </form>
 
         {data?.length > 0 ? (
-          <div className="mt-[30px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5 gap-6">
+          <div className="mt-[30px] mb-[30px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5 gap-6">
             {data.map((movie) => (
               <Link key={movie.id} to={`/movie/${movie.id}`} className="group">
-                <div className="h-[300px] overflow-hidden rounded-lg">
+                <div className=" overflow-hidden rounded-lg">
                   <img
                     className="object-cover"
                     src={
